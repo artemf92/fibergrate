@@ -1,0 +1,137 @@
+.main-slider {
+  height: 680px;
+  background: url('../img/bg-slider.png') no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 101px;
+  &__title.section-title {
+    transform: translateY(-15px);
+    margin-bottom: 57px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    flex: 0 0 535px;
+    //box-shadow: var(--main-box-shadow);
+    border-radius: var(--main-border-rad);
+    z-index: 10;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text {
+    flex: 0 0 665px;
+    margin-left: -60px;
+    background-color: #fff;
+    border-radius: var(--main-border-rad);
+    box-shadow: var(--main-box-shadow);
+
+    padding: 45px 80px 45px 100px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 28px;
+      color: var(--main-color-text);
+    }
+    .series {
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+      margin-bottom: 45px;
+
+      &:after {
+        content: "";
+        width: 100px;
+        height: 1px;
+        background-color: var(--main-color);
+
+        position: absolute;
+        bottom: -5px;
+        left: 2px;
+      }
+    }
+  }
+  &__desc {
+    margin-bottom: 45px;
+  }
+  &__link {
+    margin-left: auto;
+    margin-right: 60px;
+  }
+  &__dots-container {
+    .container {
+      position: relative;
+    }
+  }
+  &__dots.slider-dots {
+    right: 0;
+    color: var(--main-color-light);
+    padding: 0 5px;
+    border-bottom: 1px solid var(--main-color-light);
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-slider {
+    &__text {
+      flex: 0 0 max(495px, 52%);
+      padding: 15px 20px 15px 80px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .main-slider {
+    height: auto;
+    &__item {
+      flex-direction: column-reverse;
+    }
+    &__img {
+      align-self: flex-start;
+      margin-top: -18px;
+    }
+    &__text {
+      flex: initial;
+      max-width: 665px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 930px) and (max-width: 991px) {
+  .main-slider {
+    &__img {
+      margin-top: -60px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .main-slider {
+    &__text {
+      padding: 20px 30px;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .main-slider {
+    &__img {
+      margin-top: 0;
+    }
+    &__dots.slider-dots {
+      right: 55px;
+    }
+  ;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-slider {
+    &__text {
+      padding: 10px 15px;
+    }
+  }
+}

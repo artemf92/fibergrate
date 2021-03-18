@@ -1,0 +1,139 @@
+.reviews {
+  margin-bottom: 100px;
+  height: 764px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+  background-image: url(../img/reviews-bg.png);
+  position: relative;
+  &__title.section-title {
+    margin-bottom: 13px;
+  }
+  &__item {
+    position: relative;
+
+    height: 100vh;
+  }
+  &__card {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    border-radius: var(--main-border-rad);
+    box-shadow: var(--main-box-shadow);
+    padding: 37px 44px;
+    width: 100%;
+    max-width: 735px;
+    background-color: #fff;
+    transform: translateY(150px);
+  }
+  &__top {
+    display: flex;
+    position: relative;
+    padding-left: 170px;
+    margin-bottom: 70px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -23px;
+      left: 0;
+      width: 200px;
+      height: 1px;
+      background-color: var(--main-color-light);
+    }
+  }
+  &__img {
+    display: block;
+    margin-left: auto;
+  }
+  &__author {
+    border-radius: var(--main-border-rad);
+    width: 140px;
+    height: auto;
+
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+  }
+  &__card-title {
+    font-weight: 500;
+    font-size: 28px;
+  }
+  &__excerpt {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  &__desc {
+    max-width: 600px;
+    margin-bottom: 20px;
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+  &__link {
+    margin-left: auto;
+    margin-right: 95px;
+    margin-bottom: 6px;
+  }
+  &__dots-container {
+    .container {
+      position: relative;
+    }
+  }
+  &__dots.slider-dots {
+    right: 30px;
+    bottom: 15px;
+    letter-spacing: 2px;
+    color: var(--main-color-light);
+    padding: 0 5px;
+    border-bottom: 1px solid var(--main-color-light);
+  }
+}
+
+@media (max-width: 991px) {
+  .reviews {
+    height: 920px;
+    &__item {
+      //height: 1000px;
+    }
+    &__card {
+      left: 0;
+      transform: translateY(350px);
+    }
+    &__dots.slider-dots {
+      bottom: -60px;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .reviews {
+    height: 1040px;
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews {
+    height: 910px;
+    &__top {
+      padding: 0;
+      flex-direction: column;
+    }
+    &__author {
+      position: static;
+    }
+    &__img {
+      display: none!important;
+    }
+    &__card {
+      position: static;
+      transform: translateY(20px);
+    }
+  }
+}

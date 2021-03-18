@@ -1,0 +1,112 @@
+.page-footer {
+  background-color: var(--main-color);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+  background-image: url(../img/footer-bg.png);
+  padding: 25px 0;
+  .container {
+    @media (min-width: 992px) {
+      padding: 0 30px;
+    }
+  }
+  &__logo.logo {
+    background-image: url(../img/logo-footer.png);
+    margin-bottom: 52px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  &__left {
+    a {
+      color: #26a5ff;
+      font-size: 13px;
+    }
+    flex-direction: column;
+    padding-top: 8px!important;
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__right {
+    flex: 0 0 610px;
+    color: #fff;
+
+    a {
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      margin-bottom: 14px;
+      padding-left: 60px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &:first-child:before {
+        top: -4px;
+        left: 8px;
+        width: 25px;
+        height: 24px;
+        background-image: url(../img/phone-icon.png);
+      }
+      &:last-of-type:before {
+        top: 0;
+        left: 20px;
+        width: 25px;
+        height: 17px;
+        background-image: url(../img/mail-icon.png);
+      }
+      &:not(:last-child) {
+        //margin-right: 75px;
+      }
+    }
+    p {
+      font-size: 13px;
+      line-height: 30px;
+      padding-left: 60px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 28px;
+        height: 38px;
+        background-image: url(../img/location-icon.png);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    &__right {
+      flex: 0 0 410px;
+    }
+    &__logo.logo {
+      width: 275px;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .page-footer {
+    &__wrapper {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+    &__right {
+      flex: initial;
+    }
+    &__left {
+      align-self: center;
+    }
+  }
+}

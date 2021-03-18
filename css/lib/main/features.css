@@ -1,0 +1,17 @@
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.features__item {
+  width: 255px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+/*# sourceMappingURL=features.css.map */
